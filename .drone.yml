@@ -1,0 +1,13 @@
+image: go1.3
+git:
+  path: github.com/stefscherer/go-hello
+env:
+  - GOROOT=/usr/local/go
+  - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+script:
+  - go build
+  - ls -l
+notify:
+  email:
+    recipients:
+      - scherer_stefan@icloud.com
