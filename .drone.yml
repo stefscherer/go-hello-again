@@ -16,7 +16,7 @@ publish:
           - release/
         tag: v$(cat VERSION)
         token: $TOKEN
-        user: drone-ss
+        user: stefscherer
         repo: go-hello-again
 notify:
   email:
