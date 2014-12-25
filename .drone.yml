@@ -8,6 +8,10 @@ script:
   - go build
   - ls -l
   - printenv
+  - echo dollarTOKEN
+  - echo $TOKEN
+  - echo dollarDollarTOKEN
+  - echo $$TOKEN
 notify:
   email:
     recipients:
