@@ -12,6 +12,7 @@ script:
   - echo $TOKEN
   - echo dollarDollarTOKEN
   - echo $$TOKEN
+  - echo "Got any secrets in output???"
 notify:
   email:
     recipients:
