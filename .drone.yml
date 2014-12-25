@@ -1,6 +1,6 @@
 image: go1.3
 git:
-  path: github.com/stefscherer/go-hello
+  path: github.com/stefscherer/go-hello-again
 env:
   - GOROOT=/usr/local/go
   - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
@@ -11,7 +11,7 @@ publish:
         branch: master
         script:
           - mkdir release
-          - cp go-hello release/
+          - cp go-hello-again release/
         artifacts:
           - release/
         tag: v$(cat VERSION)
