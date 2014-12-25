@@ -6,13 +6,18 @@ env:
   - PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 script:
   - go build
-  - ls -l
-  - printenv
-  - echo dollarTOKEN
-  - echo $TOKEN
-  - echo dollarDollarTOKEN
-  - echo $$TOKEN
-  - echo "Got any secrets in output???"
+publish:
+    github:
+        branch: master
+        script:
+          - mkdir release
+          - cp go-hello release/
+        artifacts:
+          - release/
+        tag: v$(cat VERSION)
+        token: $TOKEN
+        user: drone-ss
+        repo: go-hello-again
 notify:
   email:
     recipients:
