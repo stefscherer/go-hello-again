@@ -15,7 +15,7 @@ publish:
         artifacts:
           - release/
         tag: v$(cat VERSION)
-        token: {{TOKEN}}
+        token: $TOKEN
         user: stefscherer
         repo: go-hello-again
 notify:
