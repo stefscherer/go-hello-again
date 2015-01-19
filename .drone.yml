@@ -11,6 +11,7 @@ publish:
         branch: master
         script:
           - mkdir release
+          - printenv
           - cp go-hello-again release/
         artifacts:
           - release/
